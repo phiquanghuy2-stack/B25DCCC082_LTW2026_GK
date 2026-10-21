@@ -131,7 +131,9 @@ body {
 
 .stat-card {
   margin: 0;
-  padding: 20px;
+  padding: 22px 20px;
+  font-size: 18px;
+  font-weight: 600;
   background: var(--surface);
   border: 1px solid var(--border);
   border-left: 4px solid var(--primary);
@@ -145,19 +147,6 @@ body {
 
 .stat-card:nth-child(3) {
   border-left-color: var(--success);
-}
-
-.stat-label {
-  display: block;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.stat-value {
-  display: block;
-  margin-top: 6px;
-  font-size: 30px;
-  font-weight: 700;
 }
 
 /* ---------- Thanh tìm kiếm / lọc ---------- */
@@ -400,12 +389,6 @@ select:focus {
 
 .detail-row:last-of-type {
   border-bottom: none;
-}
-
-.detail-label {
-  display: inline-block;
-  width: 140px;
-  color: var(--muted);
 }
 
 .detail-actions {
