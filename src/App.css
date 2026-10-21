@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  gap: 16px;
+  padding: 12px 20px;
+  background: #f2f2f2;
+}
+
+.navbar a {
+  color: #333;
+  text-decoration: none;
+}
+
+.active {
+  color: red;
+  font-weight: bold;
+}
+
+.content {
+  padding: 20px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 8px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.searching {
+  color: #888;
+  font-style: italic;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.book-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.book-table th,
+.book-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Sách đang mượn: nền xám */
+.book-table tbody tr.borrowed {
+  background: #ddd;
+}
+
+/* Đặt sau .borrowed để dòng đang mượn vẫn đổi màu khi rê chuột */
+.book-table tbody tr:hover {
+  background: #fff3cd;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: inline-block;
+  width: 140px;
+}
+
+.error {
+  color: red;
+}
+
+button {
+  margin-right: 6px;
+  cursor: pointer;
 }
