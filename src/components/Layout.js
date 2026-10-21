@@ -3,12 +3,17 @@ import NavBar from "./NavBar";
 
 const Layout = ({ loading, error }) => (
   <div>
-    <NavBar />
-    <main className="content">
+    <header className="header">
+      <div className="container header-inner">
+        <span className="brand">Thư viện khoa</span>
+        <NavBar />
+      </div>
+    </header>
+    <main className="container content">
       {loading ? (
-        <p>Đang tải...</p>
+        <p className="message">Đang tải...</p>
       ) : error ? (
-        <p>Không tải được dữ liệu</p>
+        <p className="message message-error">Không tải được dữ liệu</p>
       ) : (
         <Outlet />
       )}

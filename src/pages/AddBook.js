@@ -38,21 +38,21 @@ const AddBook = ({ onAdd }) => {
 
   return (
     <div>
-      <h2>Thêm sách mới</h2>
-      <form onSubmit={handleSubmit} noValidate>
-        <div>
+      <h2 className="page-title">Thêm sách mới</h2>
+      <form className="card form-card" onSubmit={handleSubmit} noValidate>
+        <div className="field">
           <label htmlFor="title">Tên sách</label>
           <input id="title" name="title" type="text" value={form.title} onChange={handleChange} />
         </div>
-        <div>
+        <div className="field">
           <label htmlFor="author">Tác giả</label>
           <input id="author" name="author" type="text" value={form.author} onChange={handleChange} />
         </div>
-        <div>
+        <div className="field">
           <label htmlFor="year">Năm xuất bản</label>
           <input id="year" name="year" type="number" value={form.year} onChange={handleChange} />
         </div>
-        <div>
+        <div className="field">
           <label htmlFor="category">Thể loại</label>
           <select id="category" name="category" value={form.category} onChange={handleChange}>
             {CATEGORIES.map((c) => (
@@ -62,7 +62,9 @@ const AddBook = ({ onAdd }) => {
             ))}
           </select>
         </div>
-        <button type="submit">Thêm</button>
+        <button type="submit" className="btn btn-primary">
+          Thêm
+        </button>
       </form>
       {error && <p className="error">{error}</p>}
     </div>

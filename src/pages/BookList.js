@@ -27,7 +27,7 @@ const BookList = ({ books, onDelete, onToggle }) => {
 
   return (
     <div>
-      <h2>Danh sách sách</h2>
+      <h2 className="page-title">Danh sách sách</h2>
       <FilterBar
         keyword={keyword}
         category={category}
@@ -35,7 +35,7 @@ const BookList = ({ books, onDelete, onToggle }) => {
         handleQueryShift={handleQueryShift}
         onCategoryChange={handleCategoryChange}
       />
-      <p>{`Tìm thấy ${filtered.length} cuốn sách`}</p>
+      <p className="result-count">{`Tìm thấy ${filtered.length} cuốn sách`}</p>
       <BookTable books={filtered} onDelete={onDelete} onToggle={onToggle} />
     </div>
   );

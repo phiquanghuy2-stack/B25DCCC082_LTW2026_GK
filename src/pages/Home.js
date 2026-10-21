@@ -5,10 +5,21 @@ const Home = ({ books }) => {
 
   return (
     <div>
-      <h2>Thư viện sách</h2>
-      <p>Tổng số sách: {total}</p>
-      <p>Số sách đang cho mượn: {borrowedCount}</p>
-      <p>Năm xuất bản mới nhất: {latestYear}</p>
+      <h2 className="page-title">Thư viện sách</h2>
+      <p className="page-subtitle">Chào mừng bạn đến với hệ thống quản lý thư viện khoa.</p>
+      <div className="stats">
+        <p className="stat-card">
+          <span className="stat-label">Tổng số sách:</span> <strong className="stat-value">{total}</strong>
+        </p>
+        <p className="stat-card">
+          <span className="stat-label">Số sách đang cho mượn:</span>{" "}
+          <strong className="stat-value">{borrowedCount}</strong>
+        </p>
+        <p className="stat-card">
+          <span className="stat-label">Năm xuất bản mới nhất:</span>{" "}
+          <strong className="stat-value">{latestYear}</strong>
+        </p>
+      </div>
     </div>
   );
 };

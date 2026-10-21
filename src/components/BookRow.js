@@ -11,10 +11,21 @@ const BookRow = ({ book, onDelete, onToggle }) => {
       <td>{author}</td>
       <td>{year}</td>
       <td>{category}</td>
-      <td>{available ? "Có sẵn" : "Đang mượn"}</td>
       <td>
-        <button onClick={() => onToggle(id)}>{available ? "Cho mượn" : "Nhận trả"}</button>
-        <button onClick={() => onDelete(id)}>Xóa</button>
+        <span className={`badge ${available ? "badge-ok" : "badge-borrowed"}`}>
+          {available ? "Có sẵn" : "Đang mượn"}
+        </span>
+      </td>
+      <td>
+        <button
+          className={`btn ${available ? "btn-primary" : "btn-success"}`}
+          onClick={() => onToggle(id)}
+        >
+          {available ? "Cho mượn" : "Nhận trả"}
+        </button>
+        <button className="btn btn-danger" onClick={() => onDelete(id)}>
+          Xóa
+        </button>
       </td>
     </tr>
   );
